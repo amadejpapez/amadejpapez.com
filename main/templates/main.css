@@ -1,0 +1,41 @@
+html {
+    background: black url("../templates/media/ricardo-gomez-angel-GsZLXA4JPcM-unsplash.jpg") no-repeat fixed center;
+    background-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: white;
+    margin: auto 130px 0 130px;
+    text-align: center;
+}
+
+h1 {
+    margin: 80px 0 30px 0;
+}
+
+#project {
+    background-color: #333333;
+    border-radius: 7px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+#project img {
+    width: 450px;
+    display: block;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+#project p {
+    font-size: 20px;
+    color: white;
+}
+
+#project a {
+    color: white;
+    text-decoration: underline;
+}
