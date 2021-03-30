@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="{% static "main.css" %}">
         <title>My projects</title>
     </head>
 
@@ -14,18 +15,18 @@
             <h2>End of Year Countdown</h2>
             <p>Twitter bot written in Python using Tweepy module to communicate with Twitter API.</p>
             <a href="https://github.com/amadejpapez/EndofYearCountdown"><p>More details and source code</p></a>
-            <img src="../templates/media/image1.jpg">
+            <img src="{% static "images/image1.jpg" %}">
         </div>
 
         <div id="project">
             <h2>ApplSec</h2>
             <p>Twitter bot written in Python using Tweepy module to communicate with Twitter API.</p>
             <a href="https://github.com/amadejpapez/ApplSec"><p>More details and source code</p></a>
-            <img src="../templates/media/image2.jpg">
-            <img src="../templates/media/image3.jpg">
-            <img src="../templates/media/image4.jpg">
-            <img src="../templates/media/image5.jpg">
-            <img src="../templates/media/image6.jpg">
+            <img src="{% static "images/image2.jpg" %}">
+            <img src="{% static "images/image3.jpg" %}">
+            <img src="{% static "images/image4.jpg" %}">
+            <img src="{% static "images/image5.jpg" %}">
+            <img src="{% static "images/image6.jpg" %}">
         </div>
     </body>
 </html>

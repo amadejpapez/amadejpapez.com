@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,12 +22,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '*$4%v(-*zg#nbs4*e7r1zv_r@ju4+!7*^o5(1+i_!8hy5w4k&#'
+dotenv_file = os.path.join(BASE_DIR, ".env")
+if os.path.isfile(dotenv_file):
+    dotenv.load_dotenv(dotenv_file)
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["amadejpapez.eu.pythonanywhere.com"]
+ALLOWED_HOSTS = ["amadejpapez.eu.pythonanywhere.com", "127.0.0.1"]
 
 
 # Application definition
@@ -57,7 +61,7 @@ ROOT_URLCONF = 'website.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, "templates")],
+        'DIRS': os.path.join(BASE_DIR, '/main/templates'),
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,7 +75,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'website.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
@@ -119,5 +122,4 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
-STATIC_URL = '/static/'
+STATIC_URL = "/static/"
