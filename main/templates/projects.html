@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static "main.css" %}">
+        <link rel="icon" href="{% static "images/icon.jpg" %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>My projects</title>
+    </head>
+
+    <body>
+        <h1>MY PROJECTS</h1>
+
+        <div id="project">
+            <h2>End of Year Countdown</h2>
+            <p>This is my first Python project 🐍 and it is a Twitter bot that tweets how many days or weeks there are till the end of the year. It uses Tweepy module to communicate with Twitter API. 👨‍💻</p>
+            <p>The code is open source and although the concept of the bot is very simple it caused me some headaches at the start as I just started with Python at that time.</p>
+            <a href="https://github.com/amadejpapez/EndofYearCountdown" class="fa fa-github fa-2x"></a>
+            <a href="https://twitter.com/EndOfYearCount" class="fa fa-twitter fa-2x"></a>
+            <img src="{% static "images/image1.jpg" %}">
+        </div>
+
+        <div id="project">
+            <h2>ApplSec</h2>
+            <p>Twitter bot written in Python using Tweepy module to communicate with Twitter API.</p>
+            <a href="https://github.com/amadejpapez/ApplSec" class="fa fa-github fa-2x"></a>
+            <a href="https://twitter.com/ApplSec" class="fa fa-twitter fa-2x"></a>
+            <img src="{% static "images/image2.jpg" %}">
+            <img src="{% static "images/image3.jpg" %}">
+            <img src="{% static "images/image4.jpg" %}">
+            <img src="{% static "images/image5.jpg" %}">
+            <img src="{% static "images/image6.jpg" %}">
+        </div>
+    </body>
+</html>

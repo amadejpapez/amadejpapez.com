@@ -1,6 +1,5 @@
 html {
-    background: black url("images/ricardo-gomez-angel-GsZLXA4JPcM-unsplash.jpg") no-repeat fixed center;
-    background-size: 100% 100%;
+    background: black url("images/josh-rose-trYl7JYATH0-unsplash.jpg") no-repeat fixed center;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
@@ -8,38 +7,45 @@ html {
 
 body {
     color: white;
-    margin: 4% 8%;
+    margin: 4% 9%;
     text-align: center;
 }
 
 h1 {
+    font-size: 36px;
     margin: auto 0 30px 0;
 }
 
+h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
 #project {
-    background-color: #333333;
-    border-radius: 7px;
-    padding: 10px 5px;
+    background-color: #262626;
+    border-radius: 10px;
+    padding: 15px 25px;
     margin-bottom: 20px;
     box-shadow: 20px 20px 40px 10px #091312;
 }
 
 #project img {
-    width: 45%;
+    width: 40%;
     display: block;
     margin: auto;
     margin-bottom: 3%;
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 #project p {
-    font-size: 20px;
+    font-size: 19px;
     color: white;
 }
 
 #project a {
-    color: white;
-    text-decoration: underline;
+    color: #e6e6e6;
+    text-decoration: none;
+    margin: 0 10px 20px 10px;
 }
 
 @media only screen and (max-width: 500px) and (max-height: 4895px) {
@@ -48,6 +54,7 @@ h1 {
     }
 
     h1 {
+        font-size: 30px;
         margin-bottom: 5%;
     }
 
