@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+    {% load static %}
     <head>
-        {% load static %}
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="{% static "main.css" %}">
@@ -11,27 +11,32 @@
     </head>
 
     <body>
-        <h1>MY PROJECTS</h1>
+        <a href="/" class="links"><h1>MY PROJECTS</h1></a>
 
         <div id="project">
             <h2>End of Year Countdown</h2>
             <p>This is my first Python project 🐍 and it is a Twitter bot that tweets how many days or weeks there are till the end of the year. It uses Tweepy module to communicate with Twitter API. 👨‍💻</p>
             <p>The code is open source and although the concept of the bot is very simple it caused me some headaches at the start as I just started with Python at that time.</p>
-            <a href="https://github.com/amadejpapez/EndofYearCountdown" class="fa fa-github fa-2x"></a>
-            <a href="https://twitter.com/EndOfYearCount" class="fa fa-twitter fa-2x"></a>
-            <img src="{% static "images/image1.jpg" %}">
+            <a href="https://github.com/amadejpapez/EndofYearCountdown" class="fa fa-github fa-2x links"></a>
+            <a href="https://twitter.com/EndOfYearCount" class="fa fa-twitter fa-2x links"></a>
+            <div class="demo">
+                <img src="{% static "images/image1.jpg" %}">
+            </div>
         </div>
 
         <div id="project">
             <h2>ApplSec</h2>
-            <p>Twitter bot written in Python using Tweepy module to communicate with Twitter API.</p>
-            <a href="https://github.com/amadejpapez/ApplSec" class="fa fa-github fa-2x"></a>
-            <a href="https://twitter.com/ApplSec" class="fa fa-twitter fa-2x"></a>
-            <img src="{% static "images/image2.jpg" %}">
-            <img src="{% static "images/image3.jpg" %}">
-            <img src="{% static "images/image4.jpg" %}">
-            <img src="{% static "images/image5.jpg" %}">
-            <img src="{% static "images/image6.jpg" %}">
+            <p>Twitter bot written in Python 🐍 that tweets how many days or weeks there are till the end of the year. It uses Tweepy module to communicate with Twitter API. 👨‍💻</p>
+            <p>The code is open source and although the concept of the bot is very simple it caused me some headaches at the start as I just started with Python at that time.</p>
+            <a href="https://github.com/amadejpapez/ApplSec" class="fa fa-github fa-2x links"></a>
+            <a href="https://twitter.com/ApplSec" class="fa fa-twitter fa-2x links"></a>
+            <div class="demo">
+                <img src="{% static "images/image2.jpg" %}">
+                <img src="{% static "images/image3.jpg" %}">
+                <img src="{% static "images/image4.jpg" %}">
+                <img src="{% static "images/image5.jpg" %}">
+                <img src="{% static "images/image6.jpg" %}">
+            </div>
         </div>
     </body>
 </html>
