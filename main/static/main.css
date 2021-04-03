@@ -19,7 +19,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-#project {
+.project {
     background-color: #262626;
     border-radius: 10px;
     padding: 15px 25px;
@@ -27,11 +27,11 @@ h2 {
     box-shadow: 0 0 30px 5px #051f1c;
 }
 
-#project p {
+.project p {
     font-size: 19px;
 }
 
-#project a {
+.project a {
     color: white;
 }
 
@@ -80,11 +80,11 @@ h2 {
         font-size: 22px;
     }
 
-    #project {
+    .project {
         padding: 20px 20px;
     }
 
-    #project p {
+    .project p {
         font-size: 16px;
     }
 
@@ -102,11 +102,11 @@ h2 {
         color: black;
     }
 
-    #project {
+    .project {
         background-color: white;
     }
 
-    #project a {
+    .project a {
         color: black;
     }
 
