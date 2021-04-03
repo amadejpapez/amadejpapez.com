@@ -65,18 +65,23 @@ h2 {
 }
 
 
+
 @media only screen and (max-width: 500px) and (max-height: 4895px) {
     body {
         margin: 10% 3% 5% 3%;
     }
 
     h1 {
-        font-size: 30px;
+        font-size: 33px;
         margin-bottom: 5%;
     }
 
     h2 {
-        font-size: 20px;
+        font-size: 22px;
+    }
+
+    #project {
+        padding: 20px 20px;
     }
 
     #project p {
@@ -84,11 +89,11 @@ h2 {
     }
 
     .images img {
-        width: 50px;
+        width: 60px;
     }
 
     .demo img {
-        width: 80%;
+        width: 85%;
     }
 }
 
@@ -117,7 +122,7 @@ h2 {
     .images img {
         filter: drop-shadow(0 0 20px rgb(228, 217, 217));
     }
-    
+
     .demo img {
         filter: drop-shadow(0 0 7px rgb(228, 217, 217));
     }
