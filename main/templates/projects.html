@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Find more about Amadej Papez and his projects. This is his personal website.">
         <link rel="stylesheet" type="text/css" href="{% static "main.css" %}">
         <link rel="icon" href="{% static "images/icon.png" %}">
         <link rel="apple-touch-icon" href="{% static "images/apple-touch-icon.png" %}">
@@ -18,58 +19,58 @@
     </head>
 
     <body>
-        <a href="/" class="links" style="margin: auto 0 30px 0; filter: drop-shadow(0 0 0)"><h1>MY PROJECTS</h1></a>
+        <a href="/" class="links" style="margin: auto 0 30px 0; filter: drop-shadow(0 0 0)" aria-label="Home"><h1>MY PROJECTS</h1></a>
 
-        <div id="project">
+        <div class="project">
             <h2>End of Year Countdown</h2>
             <p>This is my first Python project! 🐍 It is a Twitter bot that tweets which day of the year is it and how many days or weeks there are till the end of the year. 📆</p>
             <div class="demo">
                 <picture>
                     <source srcset="{% static "images/image1-darkmode.png" %}" media="(prefers-color-scheme: dark)">
-                    <img src="{% static "images/image1-lightmode.png" %}">
+                    <img src="{% static "images/image1-lightmode.png" %}" alt="Screenshot of a bot's tweet">
                 </picture>
             </div>
             <p>The bot is open source and all versions of the bot are available on GitHub.</p>
             <p>Although the concept of the bot is very simple it caused me some headaches at the start as it was the first week of me working with Python.
-            <a href="https://github.com/amadejpapez/EndofYearCountdown/commit/38ff39fc2241a5b16e263132aad382340713c67b">The first version</a>
+            <a href="https://github.com/amadejpapez/EndofYearCountdown/commit/38ff39fc2241a5b16e263132aad382340713c67b" aria-label="Link to the first version on GitHub">The first version</a>
             was mainly just <i>schedule</i> module. The bot did not do any calculations at all, I calculated the number of days left and entered it in manually for each day. 😅</p>
             <p>Now almost a year later the bot is fully automated and does not require any change even when a new year starts. 😁</p>
-            <a href="https://github.com/amadejpapez/EndofYearCountdown" class="fa fa-github fa-3x links"></a>
-            <a href="https://twitter.com/EndOfYearCount" class="fa fa-twitter fa-3x links"></a>
+            <a href="https://github.com/amadejpapez/EndofYearCountdown" class="fa fa-github fa-3x links" aria-label="Link to bot's GitHub"></a>
+            <a href="https://twitter.com/EndOfYearCount" class="fa fa-twitter fa-3x links" aria-label="Link to bot's Twitter"></a>
         </div>
 
-        <div id="project">
+        <div class="project">
             <h2>ApplSec</h2>
             <p>My second Twitter bot written in Python. 🐍 Every day the bot checks Apple Security Updates page and tweets when new updates are released, what changes they have, if there were any zero-days fixed, if any older release notes were updated and much more.</p>
             <div class="demo">
                 <picture>
                     <source srcset="{% static "images/image2-darkmode.png" %}" media="(prefers-color-scheme: dark)">
-                    <img src="{% static "images/image2-lightmode.png" %}">
+                    <img src="{% static "images/image2-lightmode.png" %}" alt="Screenshot of a bot's tweet">
                 </picture>
                 <picture>
                     <source srcset="{% static "images/image3-darkmode.png" %}" media="(prefers-color-scheme: dark)">
-                    <img src="{% static "images/image3-lightmode.png" %}">
+                    <img src="{% static "images/image3-lightmode.png" %}" alt="Screenshot of a bot's tweet">
                 </picture>
                 <picture>
                     <source srcset="{% static "images/image4-darkmode.png" %}" media="(prefers-color-scheme: dark)">
-                    <img src="{% static "images/image4-lightmode.png" %}">
+                    <img src="{% static "images/image4-lightmode.png" %}" alt="Screenshot of a bot's tweet">
                 </picture>
                 <picture>
                     <source srcset="{% static "images/image5-darkmode.png" %}" media="(prefers-color-scheme: dark)">
-                    <img src="{% static "images/image5-lightmode.png" %}">
+                    <img src="{% static "images/image5-lightmode.png" %}" alt="Screenshot of a bot's tweet">
                 </picture>
                 <picture>
                     <source srcset="{% static "images/image6-darkmode.png" %}" media="(prefers-color-scheme: dark)">
-                    <img src="{% static "images/image6-lightmode.png" %}">
+                    <img src="{% static "images/image6-lightmode.png" %}" alt="Screenshot of a bot's tweet">
                 </picture>
             </div>
             <p>The bot is open source on GitHub and it uses Tweepy module to communicate with Twitter API.</p>
             <p>The code is already pretty long but I have a lot more features in mind that I will be adding soon. 👀</p>
-            <a href="https://github.com/amadejpapez/ApplSec" class="fa fa-github fa-3x links"></a>
-            <a href="https://twitter.com/ApplSec" class="fa fa-twitter fa-3x links"></a>
+            <a href="https://github.com/amadejpapez/ApplSec" class="fa fa-github fa-3x links" aria-label="Link to bot's GitHub"></a>
+            <a href="https://twitter.com/ApplSec" class="fa fa-twitter fa-3x links" aria-label="Link to bot's Twitter"></a>
         </div>
 
-        <div id="project">
+        <div class="project">
             <h2>amadejpapez.eu.pythonanywhere.com</h2>
             <p>This is my personal website where I can showcase myself, my projects and where I will be able to host my future stuff. Frontend is written in HTML, CSS and JavaScript while backend is written in Django, Python web framework.</p>
             <p>The code and changes are regularly uploaded to GitHub but the repository is currently set to private as the whole website is still a work in progress. 👨‍💻</p>

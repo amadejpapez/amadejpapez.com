@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Find more about Amadej Papez and his projects. This is his personal website.">
         <link rel="stylesheet" type="text/css" href="{% static "main.css" %}">
         <link rel="icon" href="{% static "images/icon.png" %}">
         <link rel="apple-touch-icon" href="{% static "images/apple-touch-icon.png" %}">
@@ -20,19 +21,19 @@
     <body>
         <h1>ABOUT ME</h1>
 
-        <div id="project">
+        <div class="project">
             <p>My name is Amadej and I am 18 years old. 👋</p>
             <p>When I was still in the middle school, I started reading a lot about cybersecurity. That was the reason why I started experimenting with Linux. I learned about Lunix, Unix commands and about different tools. And btw I use Arch!</p>
             <p>A year ago I started learning Python as I wanted to also get into programming. I knew HTML and CSS from before and I did also try some JavaScript. I decided I would look into Python more and it became really fun working with it.</p>
             <p>A year later I have a few
-            <a href="/projects">Python projects</a>
+            <a href="/projects" aria-label="Link to the My Projects page">Python projects</a>
             🐍 and this website is built using Django, Python web framework!</p>
             <h2 style="margin-top: 40px;">WHAT I'M CURRENTLY LEARNING:</h2>
             <div class="images">
-                <div><img src="{% static "images/html.png" %}"></div>
-                <div><img src="{% static "images/css.png" %}"></div>
-                <div><img src="{% static "images/javascript.png" %}"></div>
-                <div><img src="{% static "images/python.png" %}"></div>
+                <div><img src="{% static "images/html.png" %}" alt="HTML logo"></div>
+                <div><img src="{% static "images/css.png" %}" alt="CSS logo"></div>
+                <div><img src="{% static "images/javascript.png" %}" alt="JavaScript logo"></div>
+                <div><img src="{% static "images/python.png" %}" alt="Python logo"></div>
             </div>
         </div>
     </body>
