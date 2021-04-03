@@ -1,27 +1,13 @@
 html {
-    background: black url("images/josh-rose-trYl7JYATH0-unsplash.jpg") no-repeat fixed center;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
+    background: black url("images/josh-rose-trYl7JYATH0-unsplash.jpg") top left / 100% auto no-repeat fixed;
+    font-family: Arial, Helvetica, sans-serif;
     color: white;
     margin: 4% 9%;
     text-align: center;
-}
-
-.images {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
-}
-
-.images img {
-    width: 80px;
-    padding: 0 10px;
 }
 
 h1 {
@@ -39,26 +25,40 @@ h2 {
     border-radius: 10px;
     padding: 15px 25px;
     margin-bottom: 20px;
-    box-shadow: 20px 20px 40px 10px #091312;
+    box-shadow: 0 0 30px 5px #051f1c;
+}
+
+#project p {
+    font-size: 19px;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.images img {
+    width: 80px;
+    padding: 0 10px;
+    filter: drop-shadow(0 0 20px black);
 }
 
 .demo img {
     width: 40%;
     display: block;
-    margin: auto;
-    margin-bottom: 3%;
+    margin: auto auto 3% auto;
     border-radius: 4px;
-}
-
-#project p {
-    font-size: 19px;
-    color: white;
+    filter: drop-shadow(0 0 7px black);
 }
 
 .links {
     color: #e6e6e6;
     text-decoration: none;
     margin: 0 10px 20px 10px;
+    filter: drop-shadow(0 0 10px black);
 }
 
 
@@ -78,10 +78,6 @@ h2 {
 
     .images img {
         width: 50px;
-    }
-
-    #project p {
-        font-size: 18px;
     }
 
     .demo img {
