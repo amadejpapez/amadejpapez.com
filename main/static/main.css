@@ -32,6 +32,10 @@ h2 {
     font-size: 19px;
 }
 
+#project a {
+    color: white;
+}
+
 .images {
     display: flex;
     flex-direction: row;
@@ -86,5 +90,36 @@ h2 {
 
     .demo img {
         width: 80%;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        color: black;
+    }
+
+    #project {
+        background-color: white;
+    }
+
+    #project a {
+        color: black;
+    }
+
+    h1 {
+        color: white;
+    }
+
+    .links {
+        color: black;
+        filter: drop-shadow(0 0 10px rgb(228, 217, 217));
+    }
+
+    .images img {
+        filter: drop-shadow(0 0 10px rgb(228, 217, 217));
+    }
+
+    .demo img {
+        filter: drop-shadow(0 0 7px rgb(228, 217, 217));
     }
 }
