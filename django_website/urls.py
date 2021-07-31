@@ -1,4 +1,5 @@
-"""website URL Configuration
+"""
+website URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -17,7 +18,7 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from main.views import main_view, projects_view
+from about_me.views import main_view, projects_view
 
 urlpatterns = [
     path("", main_view),

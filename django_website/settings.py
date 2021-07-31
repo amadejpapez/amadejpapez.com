@@ -27,9 +27,9 @@ if os.path.isfile(dotenv_file):
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["amadejpapez.eu.pythonanywhere.com", "127.0.0.1"]
+ALLOWED_HOSTS = [".amadejpapez.com", "127.0.0.1"]
 
 
 # Application definition
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    "main"
+    'about_me'
 ]
 
 MIDDLEWARE = [
@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'website.urls'
+ROOT_URLCONF = 'django_website.urls'
 
 TEMPLATES = [
     {
@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'website.wsgi.application'
+WSGI_APPLICATION = 'django_website.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
@@ -122,4 +122,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 STATIC_URL = "/static/"
-STATICFILES_DIRS = [os.path.join(os.path.dirname(BASE_DIR), "static"),]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+print(STATICFILES_DIRS)
