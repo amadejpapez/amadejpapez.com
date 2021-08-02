@@ -1,40 +1,70 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
-    {% load static %}
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Find more about Amadej Papez and his projects. This is his personal website.">
+        <meta name="description" content="I am Amadej Papež and this is my personal website where you can explore my work.">
         <link rel="stylesheet" type="text/css" href="{% static "main.css" %}">
         <link rel="icon" href="{% static "images/icon.png" %}">
         <link rel="apple-touch-icon" href="{% static "images/apple-touch-icon.png" %}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <title>About me</title>
-
-        <style>
-            body {
-                background: black url("{% static "images/josh-rose-trYl7JYATH0-unsplash.jpg" %}") top left / 100% auto no-repeat fixed;
-            }
-        </style>
     </head>
 
-    <body>
-        <h1>ABOUT ME</h1>
+    <body id="main-body">
+        <nav>
+            <a href="/" aria-label="Home"><img src="{% static "images/icon.png" %}" alt="My Memoji" id="nav-icon"></a>
 
-        <div class="project">
-            <p>My name is Amadej and I am 18 years old. 👋</p>
-            <p>When I was still in the middle school, I started reading a lot about cybersecurity. That was the reason why I started experimenting with Linux. I learned about Linux, Unix commands and about different tools. Btw I use Arch!</p>
-            <p>A year ago I started learning Python as I wanted to also get into programming. I knew HTML and CSS from before and I did also try some JavaScript. I decided I would look into Python more, and it became really fun working with it.</p>
-            <p>A year later I have a few
-            <a href="/projects" aria-label="My Python projects">Python projects</a>
-            🐍 and this website is built using Django, Python web framework!</p>
-            <h2 style="margin-top: 40px;">WHAT I'M CURRENTLY LEARNING:</h2>
-            <div class="images">
-                <div><img src="{% static "images/html.png" %}" alt="HTML logo"></div>
-                <div><img src="{% static "images/css.png" %}" alt="CSS logo"></div>
-                <div><img src="{% static "images/javascript.png" %}" alt="JavaScript logo"></div>
-                <div><img src="{% static "images/python.png" %}" alt="Python logo"></div>
+            <div id="dropdown-menu">
+                <button onclick="show_dropdown_menu()" class="fas fa-bars fa-1x dropdown-button"></button>
+                <div id="dropdown" class="dropdown-content">
+                    <a href="/">About me</a>
+                    <a href="/projects">My Projects</a>
+                    <a href="/contact">Contact</a>
+                </div>
+
+                <script>
+                    function show_dropdown_menu() {
+                        document.getElementById("dropdown").classList.toggle("show-dropdown");
+                    }
+
+                    window.onclick = function(event) {
+                        if (!event.target.matches(".dropdown-button")) {
+                            var dropdowns = document.getElementsByClassName("dropdown-content");
+                            var i;
+                            for (i = 0; i < dropdowns.length; i++) {
+                                var openDropdown = dropdowns[i];
+                                if (openDropdown.classList.contains("show-dropdown")) {
+                                    openDropdown.classList.remove("show-dropdown");
+                                }
+                            }
+                        }
+                    }
+                </script>
             </div>
-        </div>
+        </nav>
+
+        <main id="main-main">
+            <h1>ABOUT ME</h1>
+
+            <div class="project">
+                <p>My name is Amadej and I am 18 years old. 👋</p>
+                <p>When I was still in the middle school, I started reading a lot about cybersecurity. That was the reason why I started experimenting with Linux. I learned about Linux, Unix commands and about different tools. Btw I use Arch!</p>
+                <p>A year ago I started learning Python as I wanted to also get into programming. I knew HTML and CSS from before and I did also try some JavaScript. I decided I would look into Python more, and it became really fun working with it.</p>
+                <p>A year later I have a few
+                <a href="/projects" aria-label="My Python projects">Python projects</a>
+                🐍 and this website is built using Django, Python web framework!</p>
+                <h2 style="margin-top: 40px;">WHAT I'M CURRENTLY LEARNING:</h2>
+                <div class="images">
+                    <div><img src="{% static "images/html.png" %}" alt="HTML logo"></div>
+                    <div><img src="{% static "images/css.png" %}" alt="CSS logo"></div>
+                    <div><img src="{% static "images/javascript.png" %}" alt="JavaScript logo"></div>
+                    <div><img src="{% static "images/python.png" %}" alt="Python logo"></div>
+                </div>
+            </div>
+        </main>
+
     </body>
 </html>

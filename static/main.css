@@ -5,13 +5,94 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    margin: 4% 9%;
     text-align: center;
 }
 
+#main-body {
+    background: black url("/static/images/josh-rose-trYl7JYATH0-unsplash.jpg") top left / 100% auto no-repeat fixed;
+}
+
+#main-main {
+    padding: 80px 50px;
+    margin-bottom: 30px;
+}
+
+#main-main p {
+    font-size: 19px;
+}
+
+#main-main a {
+    color: white;
+}
+
+
+/* NAVIGATION BAR */
+nav {
+    background: black;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0; left: 0; right: 0;
+    margin: 0 auto;
+}
+
+#nav-icon {
+	width: 45px;
+    display: block;
+    float: left;
+    margin: auto;
+    margin-left: 10%;
+}
+
+#dropdown-menu {
+    float: right;
+    display: block;
+    margin: auto;
+    margin-top: 2px;
+    margin-right: max(10%, 110px);
+}
+
+.dropdown-button {
+    background-color: transparent;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-button:hover, .dropdown-button:focus {
+    background-color: #1f1d1d;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 11px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #e0e2e4
+}
+
+.show-dropdown {
+    display: block;
+}
+
+
 h1 {
     font-size: 36px;
-    margin: auto 0 30px 0;
+    margin: auto 0 20px 0;
+    filter: drop-shadow(0 0 0);
 }
 
 h2 {
