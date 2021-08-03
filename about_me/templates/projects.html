@@ -15,7 +15,9 @@
 
     <body id="main-body">
         <nav>
-            <a href="/" aria-label="Home"><img src="{% static "images/icon.png" %}" alt="My Memoji" id="nav-icon"></a>
+            <a href="/" aria-label="Home">
+                <img src="{% static "images/icon.png" %}" alt="My Memoji" id="nav-icon">
+            </a>
 
             <div id="dropdown-menu">
                 <button onclick="show_dropdown_menu()" class="fas fa-bars fa-1x dropdown-button"></button>
@@ -49,63 +51,76 @@
         <main id="main-main">
             <h1>MY PROJECTS</h1>
 
-            <div class="project">
-                <h2>End of Year Countdown</h2>
-                <p>This is my first Python project! 🐍 It is a Twitter bot that tweets which day of the year is it and how many days or weeks there are till the end of the year. 📆</p>
-                <div class="demo">
-                    <picture>
-                        <source srcset="{% static "images/image1-darkmode.png" %}" media="(prefers-color-scheme: dark)">
-                        <img src="{% static "images/image1-lightmode.png" %}" alt="Screenshot of a bot's tweet">
-                    </picture>
-                </div>
-                <p>The bot is open source and all versions of the bot are available on GitHub.</p>
-                <p>Although the concept of the bot is very simple it caused me some headaches at the start as it was the first week of me working with Python.
-                <a href="https://github.com/amadejpapez/EndofYearCountdown/commit/38ff39fc2241a5b16e263132aad382340713c67b" aria-label="Link to the first version on GitHub">The first version</a>
-                was mainly just <i>schedule</i> module. The bot did not do any calculations at all, I calculated the number of days left and entered it in manually for each day. 😅</p>
-                <p>Now almost a year later the bot is fully automated and does not require any change even when a new year starts. 😁</p>
-                <a href="https://github.com/amadejpapez/EndofYearCountdown" class="fab fa-github fa-3x links" aria-label="GitHub page"></a>
-                <a href="https://twitter.com/EndOfYearCount" class="fab fa-twitter fa-3x links" aria-label="Twitter account"></a>
-            </div>
-
-            <div class="project">
+            <div class="box">
                 <h2>ApplSec</h2>
-                <p>My second Twitter bot written in Python. 🐍 Every day the bot checks Apple Security Updates page and tweets when new updates are released, what changes they have, if there were any zero-days fixed, if any older release notes were updated and much more.</p>
-                <div class="demo">
-                    <picture>
-                        <source srcset="{% static "images/image2-darkmode.png" %}" media="(prefers-color-scheme: dark)">
-                        <img src="{% static "images/image2-lightmode.png" %}" alt="Screenshot of a bot's tweet">
-                    </picture>
-                    <picture>
-                        <source srcset="{% static "images/image3-darkmode.png" %}" media="(prefers-color-scheme: dark)">
-                        <img src="{% static "images/image3-lightmode.png" %}" alt="Screenshot of a bot's tweet">
-                    </picture>
-                    <picture>
-                        <source srcset="{% static "images/image4-darkmode.png" %}" media="(prefers-color-scheme: dark)">
-                        <img src="{% static "images/image4-lightmode.png" %}" alt="Screenshot of a bot's tweet">
-                    </picture>
-                    <picture>
-                        <source srcset="{% static "images/image5-darkmode.png" %}" media="(prefers-color-scheme: dark)">
-                        <img src="{% static "images/image5-lightmode.png" %}" alt="Screenshot of a bot's tweet">
-                    </picture>
-                    <picture>
-                        <source srcset="{% static "images/image6-darkmode.png" %}" media="(prefers-color-scheme: dark)">
-                        <img src="{% static "images/image6-lightmode.png" %}" alt="Screenshot of a bot's tweet">
-                    </picture>
-                    <picture>
-                        <source srcset="{% static "images/image7-darkmode.png" %}" media="(prefers-color-scheme: dark)">
-                        <img src="{% static "images/image7-lightmode.png" %}" alt="Screenshot of a bot's tweet">
-                    </picture>
-            </div>
-            <p>The bot is open source on GitHub and it uses Tweepy module to communicate with Twitter API.</p>
-            <p>The code is already pretty long but I have a lot more features in mind that I will be adding soon. 👀</p>
-            <a href="https://github.com/amadejpapez/ApplSec" class="fab fa-github fa-3x links" aria-label="GitHub page"></a>
-            <a href="https://twitter.com/ApplSec" class="fab fa-twitter fa-3x links" aria-label="Twitter account"></a>
+                <p>Every day the bot checks Apple Security Updates page and tweets when new updates are released, how many security issues Apple fixed in each update, if there were any zero-days fixed, if any older release notes were updated and much more.</p>
+                <picture class="demo">
+                    <source srcset="{% static "images/image2-darkmode.png" %}" media="(prefers-color-scheme: dark)">
+                    <img src="{% static "images/image2-lightmode.png" %}" alt="ApplSec 'New Updates Released' tweet">
+                </picture>
+                <picture class="demo">
+                    <source srcset="{% static "images/image3-darkmode.png" %}" media="(prefers-color-scheme: dark)">
+                    <img src="{% static "images/image3-lightmode.png" %}" alt="ApplSec 'Fixed in iOS 14.4' tweet">
+                </picture>
+                <picture class="demo">
+                    <source srcset="{% static "images/image4-darkmode.png" %}" media="(prefers-color-scheme: dark)">
+                    <img src="{% static "images/image4-lightmode.png" %}" alt="ApplSec 'Emergency updates' tweet">
+                </picture>
+                <picture class="demo">
+                    <source srcset="{% static "images/image5-darkmode.png" %}" media="(prefers-color-scheme: dark)">
+                    <img src="{% static "images/image5-lightmode.png" %}" alt="ApplSec 'Security notes updated' tweet">
+                </picture>
+                <picture class="demo">
+                    <source srcset="{% static "images/image6-darkmode.png" %}" media="(prefers-color-scheme: dark)">
+                    <img src="{% static "images/image6-lightmode.png" %}" alt="ApplSec 'Fixes in Apple websites' tweet">
+                </picture>
+                <picture class="demo">
+                    <source srcset="{% static "images/image7-darkmode.png" %}" media="(prefers-color-scheme: dark)">
+                    <img src="{% static "images/image7-lightmode.png" %}" alt="ApplSec 'iOS statistics' tweet">
+                </picture>
+                <p>The code is available on GitHub and I have a lot more features in mind that will be added in the future. 👀</p>
+                <a href="https://github.com/amadejpapez/ApplSec" class="fab fa-github fa-3x links" aria-label="ApplSec GitHub page"></a>
+                <a href="https://twitter.com/ApplSec" class="fab fa-twitter fa-3x links" aria-label="ApplSec Twitter account"></a>
             </div>
 
-            <div class="project">
+            <div class="box">
                 <h2>amadejpapez.com</h2>
-                <p>This is my personal website where I can showcase myself, my projects and where I will be able to host my future stuff. Frontend is written in HTML, CSS and JavaScript while backend is written in Django, Python web framework.</p>
-                <p>The code and changes are regularly uploaded to GitHub but the repository is currently set to private as the whole website is still a work in progress. 👨‍💻</p>
+                <p>My personal website where I can showcase myself, my projects and where I will be able to host my future stuff. Currently I am using Django, Python web framework.</p>
+                <div class="demo">
+                    <img src="{% static "images/django-icon.png" %}" alt="Django icon">
+                </div>
+                <p>The code and changes are regularly pushed to GitHub but the repository is set to private as the whole website is still a work in progress. 👨‍💻</p>
+            </div>
+
+            <div class="box">
+                <h2>My work in open-source</h2>
+                <p>I started by adding and improving hash type detection in a tool <b><a href="https://github.com/HashPals/Name-That-Hash">Name-That-Hash</a></b>. It is a popular tool used to get the type of a hash and john or hashcat mode names for cracking that type.</p>
+                <img class="demo-larger" src="{% static "images/nth-demo.png" %}" alt="Demo run of Name-That-Hash in a terminal">
+
+                <p>Because I worked a lot with regex when contributing to Name-That-Hash, I was invited to help with a tool called <b><a href="https://github.com/HashPals/Name-That-Hash">PyWhat</a></b> before it was even public. PyWhat is another tool from <a href="https://twitter.com/bee_sec_san">Bee</a>, who is an amazing person and also a creator of Name-That-Hash. PyWhat's job is to identify and return specific information from text, files or even whole folders. It can find IP addresses, emails, phone numbers, coordinates, Bitcoin wallet addresses and a bunch of more stuff.</p>
+                <img class="demo-larger" src="{% static "images/pywhat-demo.gif" %}" alt="Demo run of PyWhat in a terminal">
+            </div>
+
+            <div class="box">
+                <h2>AUR</h2>
+                <p>As an Arch user, I noticed that a few packages I was using were outdated and without maintainer in the AUR. This is short for Arch User Repository, where users upload little scripts to download and install a specific version of a package - similar to an App Store. I adopted three packages that I was using and were without a maintainer. I am also the maintainer of the <i>python-name-that-hash</i> package.</p>
+                <img class="demo-larger" src="{% static "images/aur-demo.png" %}" alt="Name-That-Hash package on AUR">
+                <p>I am planning to upload all of the PKGBUILD scripts to GitHub.</p>
+            </div>
+
+            <div class="box">
+                <h2>End of Year Countdown</h2>
+                <p>My first Twitter bot! It is tweeting which day of the year is it and how many days or weeks there are till the end of the year. 📆</p>
+                <picture class="demo">
+                    <source srcset="{% static "images/image1-darkmode.png" %}" media="(prefers-color-scheme: dark)">
+                    <img src="{% static "images/image1-lightmode.png" %}" alt="EndOfYearCountdown tweet">
+                </picture>
+                <p>The code is available on GitHub and although the concept of the bot is very simple it caused me some headaches at the start as after a few hours of learning Python, I quickly jumped into this bot. If you look at the
+                <a href="https://github.com/amadejpapez/EndofYearCountdown/commit/38ff39fc2241a5b16e263132aad382340713c67b" aria-label="First version of the EndOfYearCountdown bot on GitHub">first version</a>
+                , the bot did not do any calculations at all, I calculated the number of days left and entered it in manually for each day. When executed, the bot tweeted the text I have written, waited one day, tweeted the next text and so on. It did not do any calculations at all.</p>
+                <p>Now almost a year later the bot is fully automated and does not require any change even when a new year starts. 😁</p>
+                <a href="https://github.com/amadejpapez/EndofYearCountdown" class="fab fa-github fa-3x links" aria-label=" EndOfYearCountdown GitHub page"></a>
+                <a href="https://twitter.com/EndOfYearCount" class="fab fa-twitter fa-3x links" aria-label="EndOfYearCountdown Twitter account"></a>
             </div>
         </main>
     </body>

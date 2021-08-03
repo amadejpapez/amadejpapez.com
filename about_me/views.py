@@ -6,3 +6,6 @@ def main_view(request, *args, **kwargs):
 
 def projects_view(request, *args, **kwargs):
         return render(request, "projects.html", {})
+
+def contact_view(request, *args, **kwargs):
+        return render(request, "contact.html", {})
