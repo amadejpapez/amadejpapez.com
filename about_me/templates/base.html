@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="I am Amadej Papež and this is my personal website where you can explore my work.">
+        <link rel="stylesheet" type="text/css" href="{% static "main.css" %}">
+        <link rel="icon" href="{% static "images/icon.png" %}">
+        <link rel="apple-touch-icon" href="{% static "images/apple-touch-icon.png" %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+{% block title-body %}
+
+{% endblock title-body %}
+        <nav>
+            <a href="/" aria-label="Home"><img src="{% static "images/icon.png" %}" alt="My Memoji" id="nav-icon"></a>
+
+            <div id="dropdown-menu">
+                <button onclick="show_dropdown_menu()" class="fas fa-bars fa-1x dropdown-button"></button>
+                <div id="dropdown" class="dropdown-content">
+                    <a href="/">About me</a>
+                    <a href="/projects">My Projects</a>
+                    <a href="/contact">Contact</a>
+                </div>
+
+                <script>
+                    function show_dropdown_menu() {
+                        document.getElementById("dropdown").classList.toggle("show-dropdown");
+                    }
+
+                    window.onclick = function(event) {
+                        if (!event.target.matches(".dropdown-button")) {
+                            var dropdowns = document.getElementsByClassName("dropdown-content");
+                            var i;
+                            for (i = 0; i < dropdowns.length; i++) {
+                                var openDropdown = dropdowns[i];
+                                if (openDropdown.classList.contains("show-dropdown")) {
+                                    openDropdown.classList.remove("show-dropdown");
+                                }
+                            }
+                        }
+                    }
+                </script>
+            </div>
+        </nav>
+
+{% block page-content %}
+{% endblock page-content %}
+
+    </body>
+</html>

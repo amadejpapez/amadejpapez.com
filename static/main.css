@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    overflow-y: scroll;
 }
 
 body {
@@ -11,9 +12,6 @@ body {
 #main-body {
     background: black url("/static/images/josh-rose-trYl7JYATH0-unsplash.jpg") top left / 100% auto no-repeat fixed;
     margin: 90px 50px 50px 50px;
-}
-
-#main-main p {
     font-size: 19px;
 }
 
@@ -22,7 +20,9 @@ body {
 }
 
 
+
 /* NAVIGATION BAR */
+
 nav {
     background: black;
     position: fixed;
@@ -74,6 +74,7 @@ nav {
     padding: 11px 16px;
     text-decoration: none;
     display: block;
+    font-size: 16px;
 }
 
 .dropdown-content a:hover {
@@ -85,7 +86,9 @@ nav {
 }
 
 
+
 /* HEADERS */
+
 h1 {
     font-size: 36px;
     margin: auto 0 20px 0;
@@ -99,7 +102,9 @@ h2 {
 }
 
 
+
 /* BOX */
+
 .box {
     background-color: #262626;
     border-radius: 10px;
@@ -108,12 +113,8 @@ h2 {
     box-shadow: 0 0 30px 5px #051f1c;
 }
 
-.box p {
-    font-size: 19px;
-}
-
-.box a {
-    color: white;
+.contacts-box {
+    text-align: left !important;
 }
 
 .demo img {
@@ -125,11 +126,7 @@ h2 {
 }
 
 .demo-larger {
-    width: 55%;
-    display: block;
-    margin: auto auto 2% auto;
-    border-radius: 5px;
-    filter: drop-shadow(0 0 7px black);
+    width: 55% !important;
 }
 
 .links {
@@ -140,11 +137,8 @@ h2 {
 }
 
 
-/* CONTACTS PAGE SPECIFIC */
 
-.contacts-box {
-    text-align: left !important;
-}
+/* CONTACT PAGE SPECIFIC */
 
 .contact {
     display: flex;
@@ -180,9 +174,6 @@ h2 {
 
     .box {
         padding: 20px 20px;
-    }
-
-    .box p {
         font-size: 16px;
     }
 
@@ -192,18 +183,13 @@ h2 {
 }
 
 
+
 /* LIGHT MODE */
+
 @media (prefers-color-scheme: light) {
-    #main-body {
-        color: black;
-    }
-
-    h1 {
-        color: white;
-    }
-
     .box {
         background-color: white;
+        color: black;
     }
 
     .box a {

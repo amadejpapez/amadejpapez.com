@@ -1,62 +1,25 @@
+{% extends "base.html" %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="I am Amadej Papež and this is my personal website where you can explore my work.">
-        <link rel="stylesheet" type="text/css" href="{% static "main.css" %}">
-        <link rel="icon" href="{% static "images/icon.png" %}">
-        <link rel="apple-touch-icon" href="{% static "images/apple-touch-icon.png" %}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+{% block title-body %}
         <title>About me</title>
     </head>
 
     <body id="main-body">
-        <nav>
-            <a href="/" aria-label="Home"><img src="{% static "images/icon.png" %}" alt="My Memoji" id="nav-icon"></a>
+{% endblock title-body %}
 
-            <div id="dropdown-menu">
-                <button onclick="show_dropdown_menu()" class="fas fa-bars fa-1x dropdown-button"></button>
-                <div id="dropdown" class="dropdown-content">
-                    <a href="/">About me</a>
-                    <a href="/projects">My Projects</a>
-                    <a href="/contact">Contact</a>
-                </div>
 
-                <script>
-                    function show_dropdown_menu() {
-                        document.getElementById("dropdown").classList.toggle("show-dropdown");
-                    }
-
-                    window.onclick = function(event) {
-                        if (!event.target.matches(".dropdown-button")) {
-                            var dropdowns = document.getElementsByClassName("dropdown-content");
-                            var i;
-                            for (i = 0; i < dropdowns.length; i++) {
-                                var openDropdown = dropdowns[i];
-                                if (openDropdown.classList.contains("show-dropdown")) {
-                                    openDropdown.classList.remove("show-dropdown");
-                                }
-                            }
-                        }
-                    }
-                </script>
-            </div>
-        </nav>
-
+{% block page-content %}
         <main id="main-main">
             <h1>ABOUT ME</h1>
 
             <div class="box">
-                <p>My name is Amadej and I am an 18 year old from Slovenia. 👋</p>
-                <p>Since middle school, I loved reading cybersecurity news and just general news about computers. In high school we were writting websites and I got an interest to experiment with Linux at home. I dual-booted it alongside of Windows, so I could easily switch between them. I got to learn about Linux, Unix commands and about different open-source tools.</p>
+                <p>My name is Amadej and I am an 18-year-old from Slovenia. 👋</p>
+                <p>Since middle school, I loved reading cybersecurity news and just general news about computers. In high school we were writing websites and I got an interest to experiment with Linux at home. I dual-booted it alongside of Windows, so I could easily switch between them. I got to learn about Linux, Unix commands and about different open-source tools.</p>
                 <img src="{% static "images/python.png" %}" alt="Python logo" width="8%" min-width="200px">
                 <p>A year ago I started learning Python 🐍 as an attempt to get into programming, and I love working with it ever since.</p>
                 <p>Currently I have a few small Python projects myself and this website is made possible using Python (Django). I am also actively contributing to other open-source Python projects.</p>
             </div>
         </main>
 
-    </body>
-</html>
+{% endblock page-content %}
