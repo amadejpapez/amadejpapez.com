@@ -44,16 +44,15 @@
                         }
                     }
 
-                    var prevScrollpos = window.pageYOffset;
                     window.onscroll = function() {
-                    var currentScrollPos = window.pageYOffset;
-                        if (prevScrollpos > currentScrollPos) {
-                            document.getElementById("nav-bar").style.top = "0";
+                        var currentScrollPos = window.pageYOffset;
+
+                        if (currentScrollPos > 20) {
+                            document.getElementById("nav-bar").style.display = "none";
                         } else {
-                            document.getElementById("nav-bar").style.top = "-50px";
+                            document.getElementById("nav-bar").style.display = "initial";
                         }
-                        prevScrollpos = currentScrollPos;
-                    } 
+                    }
                 </script>
             </div>
         </nav>
