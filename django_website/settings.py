@@ -31,6 +31,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [".amadejpapez.com", "127.0.0.1"]
 
+ADMINS = [('Amadej', 'contact@amadejpapez.com')]
 
 # Application definition
 
