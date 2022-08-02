@@ -17,10 +17,12 @@ Including another URLconf
 
 
 from django.contrib import admin
-from django.urls import path
+from django.views.generic.base import RedirectView
+from django.urls import path, re_path
 from about_me.views import main_view
 
 urlpatterns = [
     path("", main_view),
     path("admin/", admin.site.urls),
+    re_path('^robots.txt$', RedirectView.as_view(url="static/robots.txt", permanent=False), name='robots')
 ]
