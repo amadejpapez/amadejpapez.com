@@ -18,11 +18,9 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from about_me.views import main_view, projects_view, contact_view
+from about_me.views import main_view
 
 urlpatterns = [
     path("", main_view),
     path("admin/", admin.site.urls),
-    path("projects/", projects_view),
-    path("contact/", contact_view)
 ]

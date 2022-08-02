@@ -1,20 +1,23 @@
-{% extends "base.html" %}
 {% load static %}
 
-{% block title %}
-        <title>404</title>
-{% endblock title %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static "main.css" %}">
+        <link rel="icon" href="{% static "images/icon.png" %}">
+        <link rel="apple-touch-icon" href="{% static "images/apple-touch-icon.png" %}">
+        <title>About me</title>
+    </head>
 
-
-{% block page-content %}
-        <main id="main-main">
-            <h1>404 ERROR</h1>
-
-            <div class="box">
-                <i class="fas fa-exclamation-circle fa-5x" style="color: orange"></i>
-                <br>
-                <p>Sorry, an error occurred while finding this page.</p>
-                <p>Please check if the entered URL is correct. The page could also be renamed or it no longer exists.</p>
-            </div>
-        </main>
-{% endblock page-content %}
+    <body>
+        <h1>404 ERROR</h1>
+        <div id="fa-icon">
+            <img src="{% static "images/fa-exclamation-circle.svg" %}" alt="Exclamation circle">
+        </div>
+        <br>
+        <p>Sorry, an error occurred while finding this page.</p>
+        <p>Please check if the entered URL is correct. The page could also be renamed or it no longer exists.</p>
+    </body>
+</html>

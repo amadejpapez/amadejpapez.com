@@ -1,22 +1,30 @@
-{% extends "base.html" %}
 {% load static %}
 
-{% block title %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static "main.css" %}">
+        <link rel="icon" href="{% static "images/icon.png" %}">
+        <link rel="apple-touch-icon" href="{% static "images/apple-touch-icon.png" %}">
         <title>About me</title>
-{% endblock title %}
+    </head>
 
+    <body>
+        <img src="{% static "images/me.png" %}" alt="Picture of me" id="main-photo">
 
-{% block page-content %}
-        <main id="main-main">
-            <h1>ABOUT ME</h1>
+        <div id="fa-icon">
+            <p>Hello! My name is Amadej and I'm 19 year's old. 👋</p>
+        </div>
 
-            <div class="box">
-                <p>My name is Amadej and I am an 18-year-old from Slovenia. 👋</p>
-                <p>Since middle school, I loved reading cybersecurity news about how attackers got in and what the company could do to prevent it.</p>
-                <p>In high school we were writing simple websites, although we were the ones teaching the professor... At that time I also got an interest to try out Linux by dual-booting it alongside of Windows, so I could easily switch between Linux and Windows. I switched between a few of the distros and in the process learned a lot about Linux, Unix commands and about different open-source tools.</p>
-                <p>A year ago, I started learning Python as an attempt to get into programming, and I love working with it.</p>
-                <img src="{% static "images/python.png" %}" alt="Python logo" style="width: 8%; min-width: 90px">
-                <p>Right now I have a few small Python projects myself and this website is made possible using Python (Django). In my free time I also actively contribute to other open-source Python projects.</p>
-            </div>
-        </main>
-{% endblock page-content %}
+        <div id="fa-icon">
+            <a href="https://github.com/amadejpapez" id="first-icon">
+                <img src="{% static "images/fa-github.svg" %}" alt="GitHub icon">
+            </a>
+            <a href="https://twitter.com/amadejpapez" id="second-icon">
+                <img src="{% static "images/fa-twitter.svg" %}" alt="Twitter icon">
+            </a>
+        </div>
+    </body>
+</html>

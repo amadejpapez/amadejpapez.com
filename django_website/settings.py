@@ -31,7 +31,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [".amadejpapez.com", "127.0.0.1"]
 
-ADMINS = [('Amadej', 'contact@amadejpapez.com')]
+ADMINS = [('Amadej', 'amadej.papez@gmail.com')]
 
 # Application definition
 
@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'about_me'
 ]
 
