@@ -30,7 +30,8 @@ p {
 }
 
 #fa-icon-error {
-    width: 250px;
+    width: 100px;
+    filter: opacity(80%) invert(100%) drop-shadow(0 0 10px black);
 }
 
 a {
