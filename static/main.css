@@ -29,6 +29,10 @@ p {
     filter: invert(100%) drop-shadow(0 0 10px black);
 }
 
+#fa-icon-error {
+    width: 250px;
+}
+
 a {
     text-decoration: none;
 }
