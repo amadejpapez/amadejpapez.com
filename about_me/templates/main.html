@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="{% static "main.css" %}">
         <link rel="icon" href="{% static "images/icon.png" %}">
         <link rel="apple-touch-icon" href="{% static "images/apple-touch-icon.png" %}">
+        
         <title>About me</title>
     </head>
 
@@ -15,14 +16,17 @@
         <img src="{% static "images/me.png" %}" alt="Picture of me" id="main-photo">
 
         <div>
-            <p>Hello! My name is Amadej and I'm 19 year's old. 👋</p>
+            <p>Hello! My name is Amadej and I'm 20 year's old. 👋</p>
         </div>
 
         <div id="fa-icon">
-            <a href="https://github.com/amadejpapez" id="first-icon">
+            <a rel="me" href="https://github.com/amadejpapez" id="first-icon">
                 <img src="{% static "images/fa-github.svg" %}" alt="GitHub icon">
             </a>
-            <a href="https://twitter.com/amadejpapez" id="second-icon">
+            <a rel="me" href="https://mastodon.social/@amadejpapez" id="first-icon">
+                <img src="{% static "images/fa-mastodon.svg" %}" alt="Mastodon icon">
+            </a>
+            <a rel="me" href="https://twitter.com/amadejpapez" id="second-icon">
                 <img src="{% static "images/fa-twitter.svg" %}" alt="Twitter icon">
             </a>
         </div>
