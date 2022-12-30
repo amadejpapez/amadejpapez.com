@@ -27,6 +27,7 @@ p {
 #fa-icon img {
     width: 35px;
     filter: invert(100%) drop-shadow(0 0 10px black);
+    margin-right: 20px;
 }
 
 #fa-icon-error {
@@ -38,8 +39,8 @@ a {
     text-decoration: none;
 }
 
-#first-icon {
-    margin-right: 20px;
+#last-icon {
+    margin-right: 0;
 }
 
 @media only screen and (max-width: 500px) and (max-height: 4895px) {
